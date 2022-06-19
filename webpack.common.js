@@ -88,13 +88,13 @@ module.exports = {
     },
     module: {
         rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-              loader: 'babel-loader',
+            {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: {
+                loader: 'babel-loader',
+              },
             },
-          },
             {
                 test: /\.(sa|sc|c)ss$/i,
                 use: [
@@ -119,6 +119,10 @@ module.exports = {
                     },
                 ],
             },
+            {
+              test: /\.(jpe?g|png|gif|svg)$/i,
+              type: "asset"
+            }
         ],
     },
 };
