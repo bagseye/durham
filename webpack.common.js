@@ -63,6 +63,7 @@ module.exports = {
     output: {
         filename: `${outputPaths.js}/[name].bundle.js`,
         path: rootOutputPath,
+        publicPath: 'http://localhost:4040/',
     },
     optimization: {
         runtimeChunk: 'single',
