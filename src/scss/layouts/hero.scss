@@ -1,0 +1,148 @@
+.hero {
+    background-color: $c_3;
+    position: relative;
+
+    &__container {
+        width: 70%;
+        max-width: 990px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        padding: 35px 0;
+
+        @media only screen and (min-width: rem(768)) {
+            width: 65%;
+            padding: 75px 0;
+        }
+
+        @media only screen and (min-width: rem(1280)) {
+            padding: 90px 0 96px 0;
+        }
+    }
+
+    &__logo {
+        width: 70px; 
+        margin-bottom: 15px;
+
+        @media only screen and (min-width: rem(768)) {
+            width: 90px;
+            margin-bottom: 25px;
+        }
+
+        @media only screen and (min-width: rem(1280)) {
+            width: 132px; 
+            margin-bottom: 45px;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__titles {
+        text-align: center;
+
+        h1 {
+            color: $c_6;
+            text-transform: uppercase;
+            @include font('primary');
+            line-height: 1.2;
+            font-size: rem(30);
+            margin-bottom: 15px;
+
+            @media only screen and (min-width: rem(768)) {
+                font-size: rem(58);
+                margin-bottom: 20px;
+            }
+
+            @media only screen and (min-width: rem(1280)) {
+                font-size: rem(78);
+                margin-bottom: 25px;
+            }
+        }
+
+        h2 {
+            color: $c_5;
+            text-transform: uppercase;
+            @include font('tertiary');
+            font-size: rem(20);
+            line-height: 1.2;
+            letter-spacing: 0.1em;
+
+            @media only screen and (min-width: rem(768)) {
+                font-size: rem(31);
+            }
+
+            @media only screen and (min-width: rem(1280)) {
+                font-size: rem(41);
+            }
+        }
+
+        >* {
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__media {
+        width: 25%;
+        position: absolute;
+        max-width: 144px;
+        padding-bottom: 100%;
+        aspect-ratio: 1 / 1;
+
+        @supports(aspect-ratio: 1 / 1) {
+            padding-bottom: 0;
+        }
+
+        @media only screen and (min-width: rem(768)) {
+            max-width: 244px;
+        }
+
+        @media only screen and (min-width: rem(1280)) {
+            max-width: 344px;
+        }
+
+        >img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &--one {
+            top: 50%;
+            left: -41px;
+            transform: translateY(-50%) rotate(6deg);
+
+            @media only screen and (min-width: rem(1280)) {
+                top: 150px;
+                left: -108px;
+                transform: translateY(0%) rotate(6deg);
+            }
+        }
+
+        &--two {
+            top: 50%;
+            right: -45px;
+            transform: translateY(-50%) rotate(-15deg);
+
+            @media only screen and (min-width: rem(1280)) {
+                top: 128px;
+                right: -111px;
+                transform: translateY(0%) rotate(-15deg);
+            }
+        }
+    }
+}

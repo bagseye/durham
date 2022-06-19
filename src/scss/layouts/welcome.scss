@@ -1,0 +1,116 @@
+.welcome {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @media only screen and (min-width: rem(768)) {
+        padding-top: 98px;
+        padding-bottom: 98px;
+    }
+
+    @media only screen and (min-width: rem(1280)) {
+        padding-top: 148px;
+        padding-bottom: 148px;
+    }
+
+    &__container {
+        color: #fff;
+        width: 70%;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 1;
+        @include font('secondary', 'medium', 'normal');
+
+        p {
+            font-size: rem(16);
+            line-height: 1.5;
+
+            @media only screen and (min-width: rem(768)) {
+                font-size: rem(20);
+            }
+
+            @media only screen and (min-width: rem(1280)) {
+                font-size: rem(25);
+            }
+        }
+
+        a {
+            color: #B9B088;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover,
+            &:focus {
+                color: $c_4;
+            }
+        }
+    }
+
+    &__media {
+        position: absolute;
+
+        >img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &--one {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($c_2, 0.65);
+            }
+        }
+
+        &--two,
+        &--three {
+            width: 25%;
+            max-width: 186px;
+            padding-top: 100%;
+            transform-origin: center;
+            aspect-ratio: 1 / 1;
+
+            @supports(aspect-ratio: 1 / 1) {
+                padding-top: 0;
+            }
+
+            @media only screen and (min-width: rem(768)) {
+                max-width: 286px;
+            }
+
+            @media only screen and (min-width: rem(1280)) {
+                max-width: 386px;
+            }
+        }
+
+        &--two {
+            top: 120px;
+            // left: -157px;
+            left: -9%;
+            transform: rotate(10deg);
+
+        }
+
+        &--three {
+            top: 162px;
+            // right: -70px;
+            right: -9%;
+            transform: rotate(10deg);
+        }
+    }
+}

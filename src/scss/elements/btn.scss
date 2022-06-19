@@ -1,0 +1,34 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: rem(14);
+    min-height: 45px;
+    width: 100%;
+    max-width: 400px;
+    background-color: $c_4;
+    color: #fff;
+    text-decoration: none;
+    appearance: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    @include font('secondary', 700, 'normal');
+    transition: background-color 0.3s ease;
+
+    &:hover,
+    &:focus {
+        background-color: $c_5;
+    }
+
+
+    @media only screen and (min-width: rem(768)) {
+        font-size: rem(21);
+        min-height: 65px;
+    }
+
+    @media only screen and (min-width: rem(1280)) {
+        font-size: rem(29);
+        min-height: 104px;
+    }
+}

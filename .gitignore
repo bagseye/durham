@@ -1,0 +1,9 @@
+*.log
+*.env
+*.DS_Store
+*.mp4
+.DS_Store?
+node_modules
+npm-debug.log
+dist/
+.DS_Store

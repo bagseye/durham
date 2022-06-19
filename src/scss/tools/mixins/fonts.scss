@@ -1,0 +1,74 @@
+/* == Font family == */
+
+
+@mixin font($family: "", $weight:"", $style:"") {
+
+	@if $family == "primary" {
+
+		@if $weight == "" or $weight == 400 or $weight == "normal" or $weight == "regular" {
+			font-family: 'Anton', sans-serif;
+			font-weight: 400;
+			font-style: normal;
+		}
+
+        @if $style == "italic" {
+            font-style: italic;
+        }
+
+	}
+
+	@else if $family == "secondary" {
+
+		@if $weight == "" or $weight == 400 or $weight == "normal" or $weight == "regular" {
+			font-family: 'objektiv-mk1', sans-serif;
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		@if $weight == "" or $weight == 500 or $weight == "medium" {
+			font-family: 'objektiv-mk1', sans-serif;
+			font-weight: 500;
+			font-style: normal;
+		}
+
+		@if $weight == "" or $weight == 700 or $weight == "bold" {
+			font-family: 'objektiv-mk1', sans-serif;
+			font-weight: 700;
+			font-style: normal;
+		}
+
+        @if $style == "italic" {
+            font-style: italic;
+        }
+
+	}
+
+    @else if $family == "tertiary" {
+
+		@if $weight == "" or $weight == 600 {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 600;
+			font-style: normal;
+		}
+
+        @if $style == "italic" {
+            font-style: italic;
+        }
+
+	}
+
+}
+
+
+/* == Line-height == */
+
+@mixin line-height($fontSize: 0, $leading: 0) {
+  line-height: round(percentage($leading/$fontSize));
+}
+
+/* == Tracking == */
+
+@mixin letter-spacing($tracking: 0) {
+  letter-spacing: round($tracking/10)+px;
+}
+

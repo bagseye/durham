@@ -1,0 +1,35 @@
+/* == Base colours == */
+
+$c_0: #000000; // Black
+$c_1: #FFFFFF; // White
+$c_2: #2C305D; //
+$c_3: #F2E9DE; //
+$c_4: #9F956F; //
+$c_5: #7B5E3D; //
+$c_6: #6E0803; //
+
+/* == List colours  == */
+
+// This is a workaround to generate convenience classes as SCSS doesn't support variable interpolation / dynamicially generated variables
+// Each colour variable (numbered) should be added to this list!
+
+$color-list: $c_0, $c_1, $c_2, $c_3, $c_4, $c_5, $c_6;
+
+/* == UI Colours == */
+
+$c_primary-heading: $c_2;
+$c_primary-heading-light: $c_1;
+$c_primary-copy: $c_2;
+$c_primary-copy-light: $c_1;
+
+$c_primary-link: $c_4;
+$c_primary-link-hover: mix(black, $c_4, 20%);
+
+$c_success: #85BF6B;
+$c_error: #E63B5B;
+
+
+/* == Bluestone == */
+
+$c_bluestone-logo: #F5EEE2;
+$c_bluestone-logo-hover: #FC0F3A;
