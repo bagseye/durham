@@ -86,8 +86,9 @@
         display: inline-block;
         height: auto;
         width: 100%;
-        max-width: 315px;
+        max-width: 215px;
         margin-bottom: 30px;
+        transition: opacity 0.3s ease;
 
         >img {
             display: block;
@@ -96,11 +97,17 @@
         }
 
         @media only screen and (min-width: rem(768)) {
+            max-width: 315px;
             margin-bottom: 50px;
         }
 
         @media only screen and (min-width: rem(1280)) {
             margin-bottom: 70px;
+        }
+
+        &:hover,
+        &:focus {
+            opacity: 0.75;
         }
     }
 
