@@ -125,6 +125,32 @@
             width: calc(50% - 8px);
         }
 
+        a {
+            &.btn {
+                &.addeventatc {
+                    color: #fff!important;
+                    background-image: none;
+                    border-radius: 0;
+
+                    .addeventatc_icon {
+                        display: none;
+                    }
+
+                    &:hover {
+                        font-size: rem(14);
+
+                        @media only screen and (min-width: rem(768)) {
+                            font-size: rem(21);
+                        }
+                    
+                        @media only screen and (min-width: rem(1280)) {
+                            font-size: rem(29);
+                        }
+                    }
+                }
+            }
+        }
+
         @media only screen and (min-width: rem(768)) {
             gap: 20px;
             padding-top: 20px;
