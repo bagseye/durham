@@ -196,6 +196,7 @@
         padding-top: 100%;
         transform-origin: center;
         aspect-ratio: 1 / 1;
+        overflow: hidden;
 
         @supports(aspect-ratio: 1 / 1) {
             padding-top: 0;
@@ -206,11 +207,11 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+            transform: scale(1.015);
         }
 
         &--one,
         &--two {
-            // top: -243px;
             top: -24px;
             max-width: 186px;
 

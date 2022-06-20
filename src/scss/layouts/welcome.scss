@@ -73,7 +73,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: rgba($c_2, 0.65);
+                background-color: rgba($c_2, 0.85);
             }
         }
 
@@ -84,6 +84,7 @@
             padding-top: 100%;
             transform-origin: center;
             aspect-ratio: 1 / 1;
+            overflow: hidden;
 
             @supports(aspect-ratio: 1 / 1) {
                 padding-top: 0;
@@ -96,11 +97,14 @@
             @media only screen and (min-width: rem(1280)) {
                 max-width: 386px;
             }
+
+            >img {
+                transform: scale(1.01);
+            }
         }
 
         &--two {
             top: 120px;
-            // left: -157px;
             left: -9%;
             transform: rotate(10deg);
 
@@ -108,7 +112,6 @@
 
         &--three {
             top: 162px;
-            // right: -70px;
             right: -9%;
             transform: rotate(10deg);
         }
