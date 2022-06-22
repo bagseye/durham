@@ -21,11 +21,6 @@
         .btn {
             font-weight: 500;
             max-width: 298px;
-        
-            @media only screen and (min-width: rem(1280)) {
-                font-size: rem(23);
-                min-height: 77px;
-            }
         }
     }
 

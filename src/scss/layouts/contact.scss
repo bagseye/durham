@@ -29,17 +29,11 @@
 
         h2 {
             text-transform: uppercase;
-            font-size: rem(30);
-            margin-bottom: 30px;
+            font-size: rem(24);
+            margin-bottom: 20px;
 
             @media only screen and (min-width: rem(768)) {
-                font-size: rem(40);
-                margin-bottom: 40px;
-            }
-        
-            @media only screen and (min-width: rem(1280)) {
-                font-size: rem(50);
-                margin-bottom: 50px;
+                font-size: rem(30);
             }
         }
 
@@ -51,29 +45,35 @@
     &__dates {
         margin-bottom: 50px;
 
-        @media only screen and (min-width: rem(768)) {
-            margin-bottom: 70px;
-        }
+        >* {
+            &:first-child {
+                margin-top: 0;
+            }
 
-        @media only screen and (min-width: rem(1280)) {
-            margin-bottom: 90px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         >* {
             font-size: rem(18);
+            line-height: 1.4;
+            margin: 0;
 
             @media only screen and (min-width: rem(768)) {
-                font-size: rem(28);
+                font-size: rem(22);
+                line-height: 1.5;
             }
         
             @media only screen and (min-width: rem(1280)) {
-                font-size: rem(36);
+                font-size: rem(25);
+                line-height: 1.6;
             }
         }
         h2 {
             text-transform: none;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         p,
@@ -237,6 +237,7 @@
 
             @media only screen and (min-width: rem(1280)) {
                 max-width: 397px;
+                top: 46%;
             }
         }
 
@@ -246,11 +247,12 @@
 
             @media only screen and (min-width: rem(768)) {
                 left: -105px;
+                top: -110px;
             }
 
             @media only screen and (min-width: rem(1280)) {
                 left: -135px;
-                top: -226px;
+                top: -120px;
             }
         }
 
@@ -259,7 +261,7 @@
             right: -25px;
 
             @media only screen and (min-width: rem(768)) {
-                top: -189px;
+                top: -125px;
                 right: -35px;
             }
         }

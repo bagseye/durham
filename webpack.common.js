@@ -12,12 +12,14 @@ const outputPaths = {
   css: 'resources/css',
   images: 'resources/images',
   video: 'resources/video',
+  docs: 'resources/docs',
   // fonts: 'resources/fonts',
 };
 
 const inputPaths = {
   images: 'src/images/',
   video: 'src/video/',
+  docs: 'src/docs'
   // fonts: 'src/fonts/',
 }
 
@@ -35,6 +37,7 @@ module.exports = {
               `${rootOutputPath}/${outputPaths.css}`,
               `${rootOutputPath}/${outputPaths.images}`,
               `${rootOutputPath}/${outputPaths.video}`,
+              `${rootOutputPath}/${outputPaths.docs}`,
             ],
             verbose: false,
             dry: false,
@@ -54,6 +57,10 @@ module.exports = {
             {
               from: inputPaths.video,
               to: outputPaths.video
+            },
+            {
+              from: inputPaths.docs,
+              to: outputPaths.docs
             }
           ]
         }, {
